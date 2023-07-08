@@ -15,3 +15,14 @@ spring:
 
 mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml
+
+openai:
+  app-key: ${OPENAI_APPKEY}
+
+gptkey: ${GPT_KEY}
+
+cos:
+  sid: ${SECRET_ID}
+  skey: ${SECRET_KEY}
+  region: ${COS_REGION}
+  bucket: ${COS_BUCKET}
