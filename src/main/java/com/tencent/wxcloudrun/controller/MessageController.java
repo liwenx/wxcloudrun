@@ -33,13 +33,12 @@ public class MessageController {
             return null;
         }
 
+        if (content.startsWith("作画")) {
+            return callDallE(param);
+        } else if (content.startsWith("gpt")){
+            return gptCompletions(param);
+        }
         return defaultReplay(param);
-
-//        if (content.startsWith("作画")) {
-//            return callDallE(param);
-//        } else {
-//            return gptCompletions(param);
-//        }
     }
 
     private String callDallE(MsgParam param) {
